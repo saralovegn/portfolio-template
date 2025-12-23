@@ -60,3 +60,38 @@ portfolio-template/
 
 **Aprendizajes**
 - La semántica mejora la accesibilidad, la legibilidad del código y la escalabilidad.
+
+---
+
+### Fase 3: Base de estilos CSS
+
+**Decisiones tomadas**  
+Se implementó una base de estilos CSS antes de comenzar con el diseño visual del portfolio. Esta base incluye un reset básico y la definición de estilos globales para asegurar consistencia visual y facilitar la escalabilidad del proyecto.
+
+**Motivación**  
+El objetivo de esta fase fue establecer una base sólida que permitiera desarrollar el diseño de forma ordenada, evitando decisiones visuales aisladas y reduciendo la posibilidad de inconsistencias en etapas posteriores.
+
+**Problemas identificados**  
+Durante el inicio del desarrollo surgió la tendencia a comenzar directamente con el diseño sin una estructura de estilos previa, lo que podía derivar en repetición de valores y dificultades de mantenimiento.
+
+**Soluciones aplicadas**  
+Se centralizaron los estilos base en un único archivo CSS, definiendo tipografías, comportamiento general del documento y reglas comunes que servirán como punto de partida para los estilos específicos.
+
+**Aprendizajes**  
+Definir una base de estilos desde el inicio facilita la organización del código, mejora la mantenibilidad y reduce errores durante el desarrollo del diseño final.
+
+---
+
+### Fase 4: Adaptación de un template CSS externo (W3Schools)
+
+**Decisiones tomadas**  
+Se utilizó un template educativo de W3Schools como referencia inicial para la estructura visual del sitio, específicamente para la navegación superior, el área de contenido y el footer. El código fue adaptado para integrarse correctamente en la estructura semántica del proyecto.
+
+**Problemas detectados**  
+El template original presentaba varias limitaciones desde un enfoque académico y profesional, como el uso excesivo de elementos `div`, la mezcla de HTML y CSS en un mismo archivo, el uso de `float` para el layout y la inclusión de valores rígidos con fines demostrativos.
+
+**Soluciones aplicadas**  
+Se separó completamente la estructura del contenido (HTML) de los estilos (CSS), se sustituyó el uso de `float` por Flexbox, se eliminaron alturas fijas y se integró el diseño dentro de una arquitectura de proyecto organizada y escalable.
+
+**Aprendizajes**  
+El uso de código externo requiere análisis y adaptación para cumplir con buenas prácticas. Comprender y modificar un template existente aporta mayor valor formativo que su uso directo sin criterio ni documentación.
