@@ -95,3 +95,33 @@ Se separó completamente la estructura del contenido (HTML) de los estilos (CSS)
 
 **Aprendizajes**  
 El uso de código externo requiere análisis y adaptación para cumplir con buenas prácticas. Comprender y modificar un template existente aporta mayor valor formativo que su uso directo sin criterio ni documentación.
+
+## Fase 5 – Integración de CDN y galería fotográfica optimizada
+
+### Objetivo
+Implementar una galería de fotografías profesional utilizando un CDN externo para mejorar el rendimiento, la escalabilidad y las buenas prácticas web.
+
+### Decisiones técnicas
+- Se utilizó **ImageKit.io** como CDN para la gestión y optimización de imágenes.
+- Las imágenes se cargan en diferentes resoluciones según su contexto:
+  - Tamaño reducido para la galería.
+  - Tamaño ampliado para la visualización en modal.
+- Se emplearon atributos `data-*` para separar la imagen de vista previa de la imagen en alta resolución.
+
+### Aprendizajes
+- Uso de CDN para optimización automática de imágenes.
+- Implementación de cargas eficientes según el contexto visual.
+- Separación clara entre estructura (HTML), estilos (CSS) y comportamiento (JavaScript).
+- Uso responsable de código inspirado en recursos educativos (W3Schools), adaptándolo a una solución propia.
+
+### Problemas encontrados
+- Dependencia de URLs externas para las imágenes.
+- Necesidad de entender la estructura de transformación de ImageKit.
+
+### Soluciones aplicadas
+- Uso de placeholders claros para facilitar la configuración futura.
+- Documentación explícita del origen y propósito del CDN.
+- Código modular y reutilizable para la galería y el modal.
+
+### Créditos
+Parte de la estructura base y conceptos visuales están inspirados en ejemplos educativos de **W3Schools**, adaptados y reimplementados con clases, estructura y lógica propias.

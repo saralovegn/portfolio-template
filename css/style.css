@@ -1,75 +1,101 @@
-/* ======================================================
-   Referencia inicial de layout:
-   Código adaptado a partir de un template educativo de W3Schools
-   (Top Navigation + Content + Footer).
-   El código ha sido modificado para cumplir con buenas prácticas,
-   HTML semántico y layout moderno (Flexbox).
-   ====================================================== */
-
-/* =========================
-   RESET Y BASE
-   ========================= */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
+/* 
+  Estilos propios del proyecto.
+  Parte de la estructura y conceptos están inspirados en ejemplos de W3Schools,
+  adaptados, reorganizados y renombrados para un desarrollo propio.
+*/
 
 body {
-    background-color: #ffffff;
-    color: #222;
-    line-height: 1.6;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
 }
 
-/* =========================
-   NAVEGACIÓN SUPERIOR
-   ========================= */
-.topnav {
-    background-color: #333;
-}
-
-.topnav nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
+.layout {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background-color: #f2f2f2;
 }
 
-.topnav ul {
-    list-style: none;
+/* Sidebar */
+
+.sidebar {
+    width: 280px;
+    background-color: #ffffff;
+    padding: 2rem 1rem;
+    text-align: center;
+    position: fixed;
+    height: 100vh;
+}
+
+.sidebar__title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.sidebar__link {
+    display: block;
+    margin: 1rem 0;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+
+.sidebar__link:hover {
+    color: #000;
+}
+
+/* Contenido */
+
+.content {
+    margin-left: 280px;
+    padding: 2rem;
+}
+
+/* Galería */
+
+.gallery {
     display: flex;
     gap: 1rem;
 }
 
-.topnav a {
-    color: #f2f2f2;
-    text-decoration: none;
-    padding: 0.5rem 0.75rem;
+.gallery__column {
+    flex: 1;
 }
 
-.topnav a:hover {
-    background-color: #ddd;
-    color: #000;
+.gallery__column img {
+    width: 100%;
+    margin-bottom: 1rem;
+    opacity: 0.85;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
 }
 
-/* =========================
-   CONTENIDO
-   ========================= */
-.content {
-    background-color: #ddd;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 2rem auto;
+.gallery__column img:hover {
+    opacity: 1;
 }
 
-/* =========================
-   FOOTER
-   ========================= */
-.footer {
-    background-color: #f1f1f1;
-    padding: 1rem;
-    text-align: center;
+/* Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal__image {
+    max-width: 90%;
+    max-height: 80vh;
+}
+
+.modal__caption {
+    color: #fff;
+    margin-top: 1rem;
+}
+
+/* Secciones */
+
+.about, .contact {
+    margin-top: 4rem;
 }
