@@ -227,3 +227,33 @@ Mejorar la experiencia de usuario al interactuar con la galería de imágenes, i
 
 ### Créditos
 Parte de la lógica del modal está inspirada en patrones educativos y ejemplos de W3Schools, adaptados y ampliados para la funcionalidad avanzada implementada.
+
+## Fase 9 – Mejora de las secciones About y Contact con neumorfismo
+
+### Objetivo
+Enriquecer el contenido de la sección "About" y ofrecer un sistema funcional para que los usuarios puedan solicitar prints o agendar llamadas a través de la sección "Contact". Aportar un estilo moderno y elegante usando neumorfismo en los campos del formulario.
+
+### Decisiones técnicas
+- **About Section**
+  - Se añadió un texto más completo sobre la trayectoria del fotógrafo.
+  - Se incluyó una imagen del autor para aportar cercanía visual.
+  - Se añadió un enlace para comprar su libro.
+  
+- **Contact Section**
+  - Creación de un formulario funcional para prints o booking de llamadas familiares.
+  - Campos (`input`, `select`, `textarea`) estilizados con **neumorfismo** para mejorar la estética.
+  - Se utilizó una combinación de sombras internas y bordes redondeados.
+
+### Problemas detectados
+- La sección About inicial era demasiado escueta.
+- El formulario de contacto necesitaba un estilo visual que destacara sin saturar la web.
+
+### Soluciones aplicadas
+- Redacción de contenido más completo y estructurado.
+- Integración de la fotografía y enlace externo de manera clara.
+- Aplicación de neumorfismo únicamente en contacto para mantener armonía.
+
+### Aprendizajes
+- La estética neumórfica mejora la percepción visual y la experiencia de usuario cuando se aplica de forma localizada.
+- Un contenido enriquecido y visualmente acompañado genera más engagement.
+- Separar los estilos visuales por sección ayuda a mantener coherencia y evita sobrecargar el diseño.
