@@ -1,7 +1,7 @@
 # Portfolio de Diseñador Gráfico
 
 ## Descripción del proyecto
-Este proyecto consiste en el desarrollo de un portfolio personal de diseñador gráfico utilizando tecnologías web básicas: HTML, CSS y JavaScript. El objetivo no es solo obtener un resultado visual, sino documentar de forma académica el proceso de aprendizaje, los errores cometidos y las soluciones aplicadas.
+Este proyecto consiste en el desarrollo de un portfolio personal para mi padre, David Love, fotógrafo, utilizando tecnologías web básicas: HTML, CSS y JavaScript. El objetivo no es solo obtener un resultado visual, sino documentar de forma académica el proceso de aprendizaje, los errores cometidos y las soluciones aplicadas.
 
 ## Objetivo académico
 - Aplicar buenas prácticas de desarrollo web desde cero
@@ -162,3 +162,38 @@ Optimizar la presentación del portfolio corrigiendo los problemas de espacio en
 
 ### Créditos
 Parte de la teoría y estructura base se inspiró en ejemplos educativos de **W3Schools**, adaptados y reimplementados con clases, estructura y lógica propias para mantener un diseño original y profesional.
+
+---
+
+## Fase 7 – Implementación de responsividad y sidebar móvil
+
+### Objetivo
+Hacer que el portfolio sea completamente responsive, asegurando que el sidebar y la galería funcionen correctamente en diferentes tamaños de pantalla, especialmente en dispositivos móviles y tablets.
+
+### Decisiones técnicas
+- Se mantuvo el sidebar **sticky** en escritorio y se convirtió en **sidebar deslizable** en pantallas pequeñas.
+- Se agregó un **header móvil** con botón tipo “hamburger” para abrir/cerrar el sidebar.
+- Se añadió un **overlay** semi-transparente al abrir el sidebar en móvil, mejorando la usabilidad.
+- La galería de imágenes ahora es **flexible** y se adapta automáticamente a diferentes resoluciones de pantalla.
+- Se actualizaron los estilos CSS para eliminar cualquier margen o espacio en blanco innecesario al cargar la página.
+- Se usaron **media queries** para diferenciar comportamiento entre desktop y mobile.
+
+### Problemas detectados
+- En pantallas pequeñas, el sidebar no se mostraba correctamente y la galería podía quedar desalineada.
+- Existía un espacio en blanco superior en la galería, que obligaba a hacer scroll innecesario.
+- El sidebar no era completamente visible en pantallas de menor altura y se cortaba.
+
+### Soluciones aplicadas
+- Se implementó un **sidebar fijo lateral** en escritorio y **deslizable** en mobile con transición suave.
+- Se corrigieron los márgenes y paddings para que el contenido se muestre desde la parte superior de la ventana.
+- Se aplicaron reglas de **flex-wrap** y tamaños mínimos a las columnas de la galería para que se ajusten a pantallas estrechas.
+- Se agregó JavaScript para manejar la apertura/cierre del sidebar en móvil de manera intuitiva y accesible.
+
+### Aprendizajes
+- La **responsividad** no solo implica cambiar tamaños, sino también reorganizar la interacción y visibilidad de elementos.
+- Las soluciones híbridas (sticky en desktop, deslizable en móvil) mejoran la usabilidad sin comprometer la estética.
+- Las media queries permiten mantener un mismo código base y adaptar el diseño según el dispositivo.
+- Separar claramente estructura (HTML), estilos (CSS) y comportamiento (JS) facilita ajustes futuros y escalabilidad.
+
+### Créditos
+El diseño original del sidebar y la galería está inspirado en ejemplos educativos de **W3Schools**, pero ha sido completamente adaptado, renombrado y reorganizado para cumplir con buenas prácticas y requerimientos profesionales.

@@ -1,13 +1,25 @@
-function openModal(element) {
-    const modal = document.getElementById("modal");
-    const modalImage = document.getElementById("modalImage");
-    const modalCaption = document.getElementById("modalCaption");
+// Sidebar móvil
+function openSidebar() {
+    document.querySelector('.sidebar').classList.add('open');
+    document.querySelector('.overlay').classList.add('active');
+}
 
-    modal.style.display = "flex";
-    modalImage.src = element.dataset.full || element.src;
-    modalCaption.textContent = element.alt;
+function closeSidebar() {
+    document.querySelector('.sidebar').classList.remove('open');
+    document.querySelector('.overlay').classList.remove('active');
+}
+
+// Modal galería
+function openModal(img) {
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modalImage');
+    const caption = document.getElementById('modalCaption');
+
+    modal.style.display = 'flex';
+    modalImg.src = img.src;
+    caption.textContent = img.alt;
 }
 
 function closeModal() {
-    document.getElementById("modal").style.display = "none";
+    document.getElementById('modal').style.display = 'none';
 }

@@ -1,15 +1,12 @@
-/* Estilos propios del proyecto. Inspirados en W3Schools, adaptados y renombrados */
-
-/* Reset básico */
+/* Estilos base y layout principal */
 body {
     margin: 0;
     font-family: "Raleway", sans-serif;
 }
 
-/* Layout principal */
 .layout {
     display: flex;
-    min-height: 100vh; /* altura mínima igual a la ventana */
+    background-color: #f2f2f2;
 }
 
 /* Sidebar */
@@ -18,16 +15,16 @@ body {
     background-color: #ffffff;
     padding: 1rem;
     text-align: center;
-
-    /* Sticky */
     position: sticky;
     top: 0;
-
-    /* Hace que la sidebar ocupe toda la altura de la columna */
     height: 100vh;
-
     z-index: 10;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar__title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
 }
 
 .sidebar__menu {
@@ -40,14 +37,8 @@ body {
     margin: 1rem 0;
 }
 
-.sidebar__title {
-    font-size: 2rem;
-    margin-bottom: 3rem;
-}
-
 .sidebar__link {
     display: block;
-    margin: 1rem 0;
     text-decoration: none;
     color: #555;
     font-weight: bold;
@@ -59,8 +50,8 @@ body {
 
 /* Main content */
 .main-content {
-    flex: 1; /* ocupa el resto del espacio */
-    padding: 1rem 2rem;
+    flex: 1;
+    padding: 2rem;
     box-sizing: border-box;
 }
 
@@ -69,18 +60,15 @@ body {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
-    align-items: flex-start;
 }
 
 .gallery__column {
     flex: 1;
-    display: flex;
-    flex-direction: column;
+    min-width: 250px;
 }
 
 .gallery__column img {
     width: 100%;
-    display: block;
     margin-bottom: 1rem;
     opacity: 0.85;
     cursor: pointer;
@@ -113,7 +101,7 @@ body {
 }
 
 /* Secciones */
-section { 
+section {
     scroll-margin-top: 2rem;
 }
 
@@ -121,9 +109,64 @@ section {
     margin-top: 4rem;
 }
 
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 2rem 0;
-    background-color: #f2f2f2;
+/* Mobile header */
+.mobile-header {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 20;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-header__button {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 5;
+}
+
+/* Responsividad */
+@media (max-width: 900px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: -280px;
+        top: 0;
+        height: 100vh;
+        transition: left 0.3s ease;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding-top: 4rem;
+    }
+
+    .mobile-header {
+        display: flex;
+    }
+
+    .overlay.active {
+        display: block;
+    }
 }
