@@ -197,3 +197,33 @@ Hacer que el portfolio sea completamente responsive, asegurando que el sidebar y
 
 ### Créditos
 El diseño original del sidebar y la galería está inspirado en ejemplos educativos de **W3Schools**, pero ha sido completamente adaptado, renombrado y reorganizado para cumplir con buenas prácticas y requerimientos profesionales.
+
+## Fase 8 – Optimización del modal y navegación interna
+
+### Objetivo
+Mejorar la experiencia de usuario al interactuar con la galería de imágenes, implementando un modal más funcional y eficiente.
+
+### Decisiones técnicas
+- Se añadió navegación dentro del modal con botones “Siguiente” y “Anterior” para recorrer la galería sin cerrarlo.
+- Implementación de carga progresiva de imágenes grandes para no bloquear la experiencia visual.
+- Se ocultó automáticamente la sidebar cuando el modal está activo, evitando superposiciones y distracciones visuales.
+- Se mantuvo la separación entre estructura (HTML), estilos (CSS) y comportamiento (JavaScript) para garantizar escalabilidad y mantenimiento sencillo.
+
+### Problemas encontrados
+- Inicialmente, el modal reemplazado no funcionaba porque faltaban las definiciones de variables y la función `showModalImage`.
+- La sidebar se superponía al modal, generando conflictos visuales.
+- Navegación dentro del modal no estaba implementada, lo que obligaba a cerrar para ver otra imagen.
+
+### Soluciones aplicadas
+- Se definieron variables globales para el modal y un índice de la imagen actual (`currentIndex`).
+- Se creó la función `showModalImage(index)` para actualizar la imagen y su caption dinámicamente.
+- Se añadió la clase `modal-open` en el `<body>` para ocultar la sidebar mientras el modal está abierto.
+- Se implementó la función `changeModal(direction)` para permitir navegación circular con los botones de siguiente y anterior.
+
+### Aprendizajes
+- La modularidad y definición clara de variables evita errores y facilita futuras ampliaciones.
+- Ocultar elementos conflictivos durante interacciones específicas mejora la UX.
+- Implementar navegación dentro del modal y carga progresiva refuerza buenas prácticas de optimización web.
+
+### Créditos
+Parte de la lógica del modal está inspirada en patrones educativos y ejemplos de W3Schools, adaptados y ampliados para la funcionalidad avanzada implementada.

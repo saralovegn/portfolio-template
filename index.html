@@ -48,11 +48,15 @@
             </div>
         </section>
 
-        <!-- Modal -->
-        <div class="modal" id="modal" onclick="closeModal()">
-            <img id="modalImage" class="modal__image">
-            <p id="modalCaption" class="modal__caption"></p>
-        </div>
+       <!-- Modal -->
+<div class="modal" id="modal">
+    <span class="modal__close" onclick="closeModal()">×</span>
+    <img id="modalImage" class="modal__image" src="" alt="">
+    <p id="modalCaption" class="modal__caption"></p>
+    <button class="modal__prev" onclick="changeModal(-1)">&#10094;</button>
+    <button class="modal__next" onclick="changeModal(1)">&#10095;</button>
+</div>
+
 
         <!-- About Section -->
         <section id="about" class="about">

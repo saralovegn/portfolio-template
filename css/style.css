@@ -95,6 +95,39 @@ body {
     max-height: 80vh;
 }
 
+/* Modal buttons */
+.modal__prev, .modal__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.modal__prev { left: 1rem; }
+.modal__next { right: 1rem; }
+
+.modal__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.modal__image {
+    max-width: 90%;
+    max-height: 80vh;
+    transition: opacity 0.3s ease;
+}
+
 .modal__caption {
     color: #fff;
     margin-top: 1rem;
@@ -169,4 +202,9 @@ section {
     .overlay.active {
         display: block;
     }
+}
+
+/* Ocultar sidebar cuando el modal está activo */
+body.modal-open .sidebar {
+    display: none;
 }
