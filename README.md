@@ -125,3 +125,40 @@ Implementar una galería de fotografías profesional utilizando un CDN externo p
 
 ### Créditos
 Parte de la estructura base y conceptos visuales están inspirados en ejemplos educativos de **W3Schools**, adaptados y reimplementados con clases, estructura y lógica propias.
+
+---
+
+## Fase 6 – Corrección de layout, sidebar y navegación principal
+
+### Objetivo
+Optimizar la presentación del portfolio corrigiendo los problemas de espacio en blanco, glitches de la sidebar y asegurar la correcta visualización de todos los apartados de navegación: Collections, About y Contact.
+
+### Decisiones técnicas
+- Se reestructuró el layout principal usando Flexbox con un contenedor `.layout` que agrupa la sidebar y el contenido principal.
+- La sidebar se definió con `height: 100vh` y `position: sticky` para que ocupe toda la altura de la ventana y permanezca visible durante el scroll.
+- Se ajustó el `z-index` y se aplicó un `box-shadow` para evitar glitches de superposición sobre la galería.
+- La navegación interna se reorganizó en apartados claros:
+  - **Collections**: Galería de imágenes.
+  - **About**: Información del fotógrafo.
+  - **Contact**: Formulario de contacto.
+- Se implementó `scroll-margin-top` en las secciones para asegurar que los anclajes al hacer click en los links de la sidebar se alineen correctamente con la parte superior de la ventana.
+
+### Problemas detectados
+- Espacio en blanco enorme al cargar la galería, obligando a scrollear hacia abajo.
+- Sidebar visible solo parcialmente y glitches al superponerse sobre imágenes.
+- Apartados de navegación no alineados ni funcionales.
+
+### Soluciones aplicadas
+- Reemplazo del `margin-left` artificial en el contenido por un layout Flexbox, permitiendo que la galería se muestre inmediatamente sin espacios innecesarios.
+- Sidebar rediseñada para ocupar toda la altura (`height: 100vh`) y mantener sticky con top: 0.
+- Ajuste de z-index y sombra para resolver glitches de opacidad.
+- Organización de los enlaces de navegación y ajuste de scroll automático con `scroll-margin-top`.
+
+### Aprendizajes
+- Comprender cómo interactúan `flex`, `sticky` y `height: 100vh` en layouts de múltiples columnas.
+- La importancia de un layout flexible y semántico para evitar espacios vacíos no deseados.
+- Control de la superposición de elementos y navegación interna eficiente.
+- Mantener la sidebar y la galería como columnas independientes dentro del contenedor Flexbox mejora la experiencia de usuario y la consistencia visual.
+
+### Créditos
+Parte de la teoría y estructura base se inspiró en ejemplos educativos de **W3Schools**, adaptados y reimplementados con clases, estructura y lógica propias para mantener un diseño original y profesional.

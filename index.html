@@ -5,86 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Love | Photography Portfolio</title>
 
-    <!-- Google Font -->
+    <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
-    <!-- Custom styles -->
+    <!-- CSS propio -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<!-- Sidebar -->
-<aside class="sidebar" id="sidebar">
-    <h1 class="sidebar__title">David<br>Love</h1>
-    <nav class="sidebar__nav">
-        <a href="#" class="sidebar__link">Portfolio</a>
-        <a href="#about" class="sidebar__link">About</a>
-        <a href="#contact" class="sidebar__link">Contact</a>
+<div class="layout">
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <h1 class="sidebar__title">David<br>Love</h1>
+        <ul class="sidebar__menu">
+            <li><a href="#collections" class="sidebar__link">Collections</a></li>
+            <li><a href="#about" class="sidebar__link">About</a></li>
+            <li><a href="#contact" class="sidebar__link">Contact</a></li>
+        </ul>
     </nav>
-</aside>
 
-<!-- Mobile header -->
-<header class="mobile-header">
-    <span class="mobile-header__title">David Love</span>
-    <button class="mobile-header__button" onclick="openSidebar()">☰</button>
-</header>
+    <!-- Main content -->
+    <main class="main-content">
 
-<!-- Overlay -->
-<div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+        <!-- Gallery Section -->
+        <section id="collections" class="gallery">
+            <div class="gallery__column">
+                <img src="https://ik.imagekit.io/saralove/WhatsApp%20Image%202025-12-29%20at%2000.18.28.jpeg" alt="Photography work" onclick="openModal(this)">
+                <img src="https://ik.imagekit.io/saralove/WhatsApp%20Image%202025-12-29%20at%2000.18.28%20(3).jpeg" alt="Photography work" onclick="openModal(this)">
+                <img src="https://ik.imagekit.io/saralove/WhatsApp%20Image%202025-12-29%20at%2000.18.28%20(2).jpeg" alt="Photography work" onclick="openModal(this)">
+            </div>
+            <div class="gallery__column">
+                <img src="https://ik.imagekit.io/saralove/WhatsApp%20Image%202025-12-29%20at%2000.14.03.jpeg" alt="Photography work" onclick="openModal(this)">
+                <img src="https://ik.imagekit.io/saralove/WhatsApp%20Image%202025-12-29%20at%2000.14.52.jpeg" alt="Photography work" onclick="openModal(this)">
+                <img src="https://ik.imagekit.io/saralove/WhatsApp%20Image%202025-12-29%20at%2000.14.51%20(1).jpeg" alt="Photography work" onclick="openModal(this)">
+            </div>
+            <div class="gallery__column">
+                <img src="https://ik.imagekit.io/saralove/WhatsApp%20Image%202025-12-29%20at%2000.14.51.jpeg" alt="Photography work" onclick="openModal(this)">
+                <img src="https://ik.imagekit.io/saralove/WhatsApp%20Image%202025-12-29%20at%2000.18.27.jpeg" alt="Photography work" onclick="openModal(this)">
+                <img src="https://ik.imagekit.io/saralove/WhatsApp%20Image%202025-12-29%20at%2000.18.28%20(1).jpeg" alt="Photography work" onclick="openModal(this)">
+            </div>
+        </section>
 
-<!-- Main content -->
-<main class="main-content">
-
-    <!-- Gallery -->
-    <section class="gallery">
-        <div class="gallery__column">
-            <img src="https://ik.imagekit.io/saralove/WhatsApp%20Image%202025-12-29%20at%2000.18.28.jpeg" alt="Photography work" onclick="openModal(this)">
-            <img src="assets/img/photo2.jpg" alt="Photography work" onclick="openModal(this)">
-            <img src="assets/img/photo3.jpg" alt="Photography work" onclick="openModal(this)">
+        <!-- Modal -->
+        <div class="modal" id="modal" onclick="closeModal()">
+            <img id="modalImage" class="modal__image">
+            <p id="modalCaption" class="modal__caption"></p>
         </div>
 
-        <div class="gallery__column">
-            <img src="https://ik.imagekit.io/saralove/WhatsApp%20Image%202025-12-29%20at%2000.14.03.jpeg" alt="Photography work" onclick="openModal(this)">
-            <img src="https://ik.imagekit.io/saralove/WhatsApp%20Image%202025-12-29%20at%2000.14.52.jpeg" alt="Photography work" onclick="openModal(this)">
-            <img src="https://ik.imagekit.io/saralove/WhatsApp%20Image%202025-12-29%20at%2000.14.51%20(1).jpeg" alt="Photography work" onclick="openModal(this)">
-        </div>
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2>About David Love</h2>
+            <p>
+                David Byron Love, American photographer and story telling writer.
+            </p>
+        </section>
 
-        <div class="gallery__column">
-            <img src="https://ik.imagekit.io/saralove/WhatsApp%20Image%202025-12-29%20at%2000.14.51.jpeg" alt="Photography work" onclick="openModal(this)">
-            <img src="https://ik.imagekit.io/saralove/WhatsApp%20Image%202025-12-29%20at%2000.18.27.jpeg" alt="Photography work" onclick="openModal(this)">
-            <img src="https://ik.imagekit.io/saralove/WhatsApp%20Image%202025-12-29%20at%2000.18.28%20(1).jpeg" alt="Photography work" onclick="openModal(this)">
-        </div>
-    </section>
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <p>Para colaboraciones o comisiones, ponte en contacto a través del formulario.</p>
+        </section>
 
-    <!-- Modal -->
-    <div class="modal" id="modal" onclick="closeModal()">
-        <img id="modalImage" class="modal__image">
-        <p id="modalCaption" class="modal__caption"></p>
-    </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2025 David Love</p>
+        </footer>
 
-    <!-- About -->
-    <section id="about" class="about">
-        <h2>About David Love</h2>
-        <p>
-            David Love, American author and photographer focused on visual storytelling, landscape and portrait photography.
-            This portfolio presents a curated selection of his work.
-        </p>
-    </section>
+    </main>
 
-    <!-- Contact -->
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>For commissions or collaborations, please get in touch.</p>
-    </section>
+</div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>© 2025 David Love</p>
-    </footer>
-
-</main>
-
+<!-- Script para modal -->
 <script src="js/main.js"></script>
+
 </body>
 </html>
